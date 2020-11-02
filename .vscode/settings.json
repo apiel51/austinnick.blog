@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.autoSave": "afterDelay",
+  "editor.minimap.enabled": false,
+  "css.customData": [".vscode/tailwind_css.json"]
+}
