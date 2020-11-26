@@ -5,10 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "build:styles": "postcss styles/tailwind.css -o styles/index.css"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "autoprefixer": "^10.0.2",
     "next": "10.0.0",
+    "postcss": "^8.1.10",
+    "postcss-cli": "^8.3.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "tailwindcss": "^1.9.6"
