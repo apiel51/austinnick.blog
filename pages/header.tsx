@@ -14,11 +14,22 @@ export default function Header() {
         <div className="py-1 text-2xl cursor-pointer">Austin Piel</div>
       </Link>
       <div className="flex-1 flex">
-        <a href="https://www.linkedin.com/in/austinpiel/">
-          <img className="w-4 h-4 mr-2 cursor-pointer" src={LinkedInIcon} />
+        <a
+          aria-label="LinkedIn icon button"
+          href="https://www.linkedin.com/in/austinpiel/"
+        >
+          <img
+            className="w-4 h-4 mr-2 cursor-pointer"
+            alt="linkedin icon"
+            src={LinkedInIcon}
+          />
         </a>
-        <a href="https://github.com/apiel51">
-          <img className="w-4 h-4 rounded-sm cursor-pointer" src={GithubIcon} />
+        <a aria-label="Github icon button" href="https://github.com/apiel51">
+          <img
+            className="w-4 h-4 rounded-sm cursor-pointer"
+            alt="github icon"
+            src={GithubIcon}
+          />
         </a>
       </div>
     </header>
