@@ -5,9 +5,9 @@ export default function About() {
         Hi! My name is Austin, and this is my website.
       </div>
       <div className="max-w-lg w-full pt-4">
-        I live in Seattle and am focused on developing trust agent tooling at
-        Airbnb. Previously, I studied Computer Science at University of Maryland
-        College Park.
+        I live in Seattle and am developing trust agent tooling at Airbnb.
+        Previously, I studied Computer Science at University of Maryland College
+        Park.
       </div>
       <div className="max-w-lg w-full pt-4">
         Professionally, I'm particularly interested in entrepreneurship and
