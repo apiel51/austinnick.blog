@@ -5,8 +5,12 @@ module.exports = {
   },
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        darkGray: "#404040",
+      },
+    },
   },
   variants: {},
   plugins: [],
-}
+};
