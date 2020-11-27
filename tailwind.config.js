@@ -10,6 +10,9 @@ module.exports = {
         darkGray: "#404040",
       },
     },
+    fontFamily: {
+      sans: "barlow, sans-serif",
+    },
   },
   variants: {},
   plugins: [],
