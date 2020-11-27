@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="max-w-lg w-full pt-4">
+    <main className="max-w-lg w-full pt-4">
       <div>Hi! My name is Austin, and this is my website.</div>
       <div className="pt-4">
         I live in Seattle and am developing trust agent tooling at Airbnb.
@@ -22,6 +22,6 @@ export default function About() {
         Leo.
       </div>
       <div className="pt-4">Feel free to reach out at apiel51@gmail.com</div>
-    </div>
+    </main>
   );
 }
