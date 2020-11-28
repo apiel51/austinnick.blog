@@ -15,11 +15,12 @@ export default function Header() {
       </Link>
       <div className="flex-1 flex">
         <a
+          className="mr-2"
           aria-label="LinkedIn icon button"
           href="https://www.linkedin.com/in/austinpiel/"
         >
           <img
-            className="w-4 h-4 mr-2 cursor-pointer"
+            className="w-4 h-4cursor-pointer"
             alt="linkedin icon"
             src={LinkedInIcon}
           />
