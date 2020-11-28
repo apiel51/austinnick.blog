@@ -20,7 +20,7 @@ export default function Header() {
           href="https://www.linkedin.com/in/austinpiel/"
         >
           <img
-            className="w-4 h-4cursor-pointer"
+            className="w-4 h-4 cursor-pointer"
             alt="linkedin icon"
             src={LinkedInIcon}
           />

@@ -1,6 +1,6 @@
 export default function Thoughts() {
   return (
-    <div>
+    <div className="pb-8">
       <div className="text-sm pb-4 text-gray-700">
         Last updated on November 27, 2020
       </div>
