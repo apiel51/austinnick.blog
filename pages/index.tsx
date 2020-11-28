@@ -1,13 +1,10 @@
-import Header from "./Header";
-import Links from "./Links";
-import About from "./About";
+import Page from "../components/Page";
+import About from "../components/About";
 
 export default function Home() {
   return (
-    <div className="container mx-auto px-4 pt-4 flex flex-col items-center">
-      <Header />
-      <Links />
+    <Page>
       <About />
-    </div>
+    </Page>
   );
 }

@@ -1,11 +1,10 @@
 export default function About() {
   return (
-    <main className="max-w-lg w-full pt-4">
+    <>
       <div>Hi! My name is Austin, and this is my website.</div>
       <div className="pt-4">
-        I live in Seattle and am developing trust agent tooling at Airbnb.
-        Previously, I studied Computer Science at University of Maryland College
-        Park.
+        I live in Seattle and develop trust agent tooling at Airbnb. Previously,
+        I studied Computer Science at University of Maryland College Park.
       </div>
       <div className="pt-4">
         Professionally, I'm particularly interested in entrepreneurship and
@@ -22,6 +21,6 @@ export default function About() {
         Leo.
       </div>
       <div className="pt-4">Feel free to reach out at apiel51@gmail.com</div>
-    </main>
+    </>
   );
 }
