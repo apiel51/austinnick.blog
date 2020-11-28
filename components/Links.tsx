@@ -37,9 +37,11 @@ export default function MobileLinks() {
     <nav className="flex text-center w-full max-w-lg pt-4 pb-2 border-b">
       {Object.entries(pathMap).map((mapping) =>
         pathname === mapping[1] ? (
-          <BoldText>{mapping[0]}</BoldText>
+          <BoldText key={mapping[0]}>{mapping[0]}</BoldText>
         ) : (
-          <Link path={mapping[1]}>{mapping[0]}</Link>
+          <Link key={mapping[0]} path={mapping[1]}>
+            {mapping[0]}
+          </Link>
         )
       )}
     </nav>
