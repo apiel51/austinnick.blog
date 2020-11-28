@@ -1,10 +1,10 @@
 import Page from "../components/Page";
-import ComingSoon from "../components/ComingSoon";
+import Thoughts from "../components/Thoughts";
 
 export default function Writing() {
   return (
     <Page>
-      <ComingSoon />
+      <Thoughts />
     </Page>
   );
 }
