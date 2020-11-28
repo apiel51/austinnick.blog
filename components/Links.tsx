@@ -8,7 +8,7 @@ type LinkProps = {
 
 const BoldText: FunctionComponent = ({ children }) => {
   return (
-    <div className="flex-1 font-bold text-xs sm:text-base">{children}</div>
+    <div className="flex-1 font-semibold text-xs sm:text-base">{children}</div>
   );
 };
 

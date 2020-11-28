@@ -1,10 +1,10 @@
 import Page from "../components/Page";
-import ComingSoon from "../components/ComingSoon";
+import Bookshelf from "../components/bookshelf";
 
-export default function Bookshelf() {
+export default function BookshelfPage() {
   return (
     <Page>
-      <ComingSoon />
+      <Bookshelf />
     </Page>
   );
 }
