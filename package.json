@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "build:styles": "postcss styles/tailwind.css -o styles/index.css"
+    "build": "yarn build:styles && next build",
+    "build:styles": "postcss styles/tailwind.css -o styles/index.css",
+    "start": "next start"
   },
   "dependencies": {
     "autoprefixer": "^10.0.2",
