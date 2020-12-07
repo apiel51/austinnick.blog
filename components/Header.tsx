@@ -8,7 +8,7 @@ export default function Header() {
       <img
         className="sm:w-20 sm:h-20 flex rounded-full w-16 h-16"
         alt="picture of Austin"
-        src="https://scontent.fabe1-1.fna.fbcdn.net/v/t1.0-9/121004016_5250572514968820_976679705646868873_o.jpg?_nc_cat=102&ccb=2&_nc_sid=09cbfe&_nc_ohc=8a2-Nu_OCkoAX9ePhCF&_nc_ht=scontent.fabe1-1.fna&oh=4d61f543ee7990c3a49871b58e065c2d&oe=5FE78E9B"
+        src="https://public-bucket-austin-things.s3-us-west-2.amazonaws.com/austin_headshot.jpg"
       />
       <Link href="/">
         <div className="py-1 text-2xl cursor-pointer">Austin Piel</div>
