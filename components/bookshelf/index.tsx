@@ -12,6 +12,7 @@ export default function Bookshelf() {
         <BookRow
           title="Zero to One: Notes on Startups, or How to Build the Future"
           date="11/30/20"
+          url="https://www.goodreads.com/book/show/37653154-zero-to-one"
         />
       </div>
     </div>

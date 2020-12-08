@@ -18,6 +18,7 @@ export default function Header() {
           className="mr-2"
           aria-label="LinkedIn icon button"
           href="https://www.linkedin.com/in/austinpiel/"
+          target="_blank"
         >
           <img
             className="w-4 h-4 cursor-pointer"
@@ -25,7 +26,11 @@ export default function Header() {
             src={LinkedInIcon}
           />
         </a>
-        <a aria-label="Github icon button" href="https://github.com/apiel51">
+        <a
+          aria-label="Github icon button"
+          href="https://github.com/apiel51"
+          target="_blank"
+        >
           <img
             className="w-4 h-4 rounded-sm cursor-pointer"
             alt="github icon"
