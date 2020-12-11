@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <>
-      <div>Hi! My name is Austin, and this is my website.</div>
+      <div>Hi! I'm Austin 👋</div>
       <div className="pt-4">
         I live in Seattle and develop tooling for trust agents at Airbnb.
         Previously, I studied Computer Science at University of Maryland College

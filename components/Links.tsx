@@ -32,7 +32,6 @@ const pathMap = {
 
 export default function MobileLinks() {
   const { pathname } = useRouter();
-  console.log(pathname);
   return (
     <nav className="flex text-center w-full max-w-lg pt-4 pb-2 border-b">
       {Object.entries(pathMap).map((mapping) =>
