@@ -2,11 +2,30 @@ export default function Thoughts() {
   return (
     <div className="pb-8">
       <div className="text-sm pb-4 text-gray-700">
-        Last updated on November 27, 2020
+        Last updated on December 11, 2020
       </div>
       This is a list of some things that have crossed my mind. Items are placed
-      in reverse chronological order.
+      in reverse chronological order. The bolded thoughts are ones I find
+      particularly important.
       <ul className="list-disc list-inside pt-4 grid gap-y-2">
+        <li>
+          I find "maturing" an enjoyable process when I embrace it instead of
+          fight it.
+        </li>
+        <li>
+          I only say "buh-bye" over the phone. Especially if it's with a
+          stranger (like a customer service representative)
+        </li>
+        <li className="font-semibold">
+          It's hard for me to have insightful or creative thoughts when sitting
+          idly - my brain tends to think about all of the things that I should
+          be doing instead of sitting down and thinking. But when I'm performing
+          a menial task (showering, washing the dishes), that part of my brain
+          turns off and allows for more unbound thinking.
+        </li>
+        <li className="font-semibold">
+          The only difference between a bad life and a good life is perspective.
+        </li>
         <li>
           We often think we have 2 choices when making a decision. Too many
           people forget about the third option (door #3), which is to collect
@@ -25,7 +44,7 @@ export default function Thoughts() {
           Don't shy away from doing the hard things. At some point you'll have
           to face the music.
         </li>
-        <li>
+        <li className="font-semibold">
           You'll never have more time left in your life than you do right now.
         </li>
         <li>
@@ -46,11 +65,11 @@ export default function Thoughts() {
           Being in my early twenties, I am more self-aware of my own faults than
           ever before.
         </li>
-        <li>
+        <li className="font-semibold">
           If you feel like you need help, ask for it. You almost certainly won't
           regret it.
         </li>
-        <li>
+        <li className="font-semibold">
           Whether something is morally sound and whether it should be legal are
           two separate questions that may not have the same answer.
         </li>
@@ -68,7 +87,7 @@ export default function Thoughts() {
           your comfort zone.
         </li>
         <li>Gratitude is a precursor to happiness.</li>
-        <li>
+        <li className="font-semibold">
           Let people do nice things for you. Don't fight it, be grateful
           instead. It's a win for both parties.
         </li>
