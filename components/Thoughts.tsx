@@ -5,9 +5,18 @@ export default function Thoughts() {
         Last updated on December 11, 2020
       </div>
       This is a list of some things that have crossed my mind. Items are placed
-      in reverse chronological order. The bolded thoughts are ones I find
-      particularly important.
+      in reverse chronological order. Thoughts I find especially important are
+      bolded.
       <ul className="list-disc list-inside pt-4 grid gap-y-2">
+        <li className="font-semibold">
+          Embrace small activities that you know you'll never regret doing (some
+          examples for me are brushing my teeth, doing the dishes). You will
+          always feel better after doing them.
+        </li>
+        <li>
+          Having a roommate teaches you to compromise and sets you up to be a
+          more reasonable person.
+        </li>
         <li>
           I find "maturing" an enjoyable process when I embrace it instead of
           fight it.

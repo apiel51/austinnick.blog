@@ -27,7 +27,8 @@ const pathMap = {
   Writing: "/writing",
   Bookshelf: "/bookshelf",
   Thoughts: "/thoughts",
-  Music: "/music",
+  /* maybe I'll end up doing this idk ¯\_(ツ)_/¯ */
+  // Music: "/music",
 };
 
 export default function MobileLinks() {

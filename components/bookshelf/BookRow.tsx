@@ -7,7 +7,7 @@ type Props = {
 
 export default function BookRow({ date, favorite, title, url }: Props) {
   return (
-    <div className="flex py-4 text-sm">
+    <div className="flex py-2 text-sm">
       <div className="flex items-center pr-4 text-gray-700">{date}</div>
       <div className="flex-1">
         <a
