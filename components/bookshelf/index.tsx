@@ -8,7 +8,7 @@ export default function Bookshelf() {
       <div className="pt-2 mt-2">
         <BookRow
           title="The Adventures of Tom Sawyer"
-          date="1/4/21"
+          date="01/04/21"
           url="https://www.goodreads.com/book/show/24583.The_Adventures_of_Tom_Sawyer"
         />
         <BookRow
