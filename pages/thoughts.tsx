@@ -1,5 +1,5 @@
-import Page from "../components/Page";
-import Thoughts from "../components/Thoughts";
+import Page from "../components/shared/Page";
+import Thoughts from "../components/thoughts";
 
 export default function ThoughtsPage() {
   return (
