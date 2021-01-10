@@ -2,12 +2,48 @@ export default function Thoughts() {
   return (
     <div className="pb-8">
       <div className="text-sm pb-4 text-gray-700">
-        Last updated on December 11, 2020
+        Last updated on January 10, 2021
       </div>
-      This is a list of some things that have crossed my mind. Items are placed
-      in reverse chronological order. Thoughts I find especially important are
-      bolded.
+      This is a list of some things that have crossed my mind. Some are deep,
+      some are not. Items are placed in reverse chronological order. Thoughts I
+      find especially important are bolded.
       <ul className="list-disc list-inside pt-4 grid gap-y-2">
+        <li>
+          The{" "}
+          <a
+            aria-label="Google nest hub link"
+            className="underline"
+            href="https://store.google.com/us/product/google_nest_hub"
+            target="_blank"
+          >
+            Google nest hub
+          </a>{" "}
+          is great in the kitchen for viewing multiple cooking timers at once.
+        </li>
+        <li>
+          Raising money from a great investor provides you with not just money,
+          but an influential group/individual having a vested interest in the
+          success of your company.
+        </li>
+        <li>
+          Whenever messaging someone at work and referring to a document (e.g.
+          design doc, pull request) always send a link with it. It save the
+          recipient the time of trying to find the referenced item.
+        </li>
+        <li>
+          It's a good idea to work for the money-earning portion of a company.
+          The company will hold that portion to a higher bar than, say, internal
+          tools, that don't have as high of an ROI. More money = more reason to
+          build high-quality software.
+        </li>
+        <li>
+          There are too many valuable things to learn to waste time learning
+          things that are not valuable
+        </li>
+        <li>
+          Happiness is when you can view the present the same way you view a
+          fond memory
+        </li>
         <li className="font-semibold">
           Embrace small activities that you know you'll never regret doing (some
           examples for me are brushing my teeth, doing the dishes). You will
