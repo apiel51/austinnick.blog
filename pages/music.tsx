@@ -1,5 +1,5 @@
-import Page from "../components/shared/Page";
-import ComingSoon from "../components/shared/ComingSoon";
+import Page from "shared/Page";
+import ComingSoon from "shared/ComingSoon";
 
 export default function MusicPage() {
   return (

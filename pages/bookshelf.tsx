@@ -1,5 +1,5 @@
-import Page from "../components/shared/Page";
-import Bookshelf from "../components/bookshelf";
+import Page from "shared/Page";
+import Bookshelf from "components/bookshelf";
 
 export default function BookshelfPage() {
   return (

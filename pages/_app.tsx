@@ -1,5 +1,5 @@
 import Head from "next/head";
-import "../styles/index.css";
+import "styles/index.css";
 
 // pass strict
 type Props = {
