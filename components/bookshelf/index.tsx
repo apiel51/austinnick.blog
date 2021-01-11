@@ -7,6 +7,12 @@ export default function Bookshelf() {
       website. Titles I particularly enjoyed are bolded.
       <div className="pt-2 mt-2">
         <BookRow
+          favorite
+          title="Siddhartha"
+          date="01/10/21"
+          url="https://www.goodreads.com/book/show/52036.Siddhartha"
+        />
+        <BookRow
           title="The Adventures of Tom Sawyer"
           date="01/04/21"
           url="https://www.goodreads.com/book/show/24583.The_Adventures_of_Tom_Sawyer"
