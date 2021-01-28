@@ -1,3 +1,5 @@
+import NextLink from "next/link";
+
 export default function Thoughts() {
   return (
     <div className="pb-8">
@@ -73,8 +75,11 @@ export default function Thoughts() {
         </li>
         <li>
           We often think we have 2 choices when making a decision. Too many
-          people forget about the third option (door #3), which is to collect
-          more information before making a decision.
+          people forget about the third option (
+          <NextLink href="/writing/1">
+            <span className="underline cursor-pointer">door #3</span>
+          </NextLink>
+          ), which is to collect more information before making a decision.
         </li>
         <li>
           It is important to be able to cringe when looking back at things you
