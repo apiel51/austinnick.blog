@@ -16,7 +16,7 @@ export default function Header() {
           className="rounded-full"
         />
       </div>
-      <Link href="/">
+      <Link passHref href="/">
         <div className="py-1 text-2xl cursor-pointer">Austin Nick Piel</div>
       </Link>
       <div className="flex-1 flex">

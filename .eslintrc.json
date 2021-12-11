@@ -3,6 +3,7 @@
     "airbnb",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@next/next/recommended",
     "prettier"
   ],
   "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
@@ -10,7 +11,6 @@
   "env": {
     "jest": true
   },
-  "ignorePatterns": ["**/*.js"],
   "rules": {
     "import/prefer-default-export": "off",
     "no-shadow": "off",
