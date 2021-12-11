@@ -1,10 +1,28 @@
-import Page from "shared/Page";
-import About from "components/about";
+import { GetStaticProps } from 'next';
 
-export default function Home() {
+import Page from 'shared/Page';
+import About from 'components/About';
+import { getParagraphBlocksFromPage, ParagraphBlock } from 'notion';
+
+type HomeProps = {
+  aboutParagraphs: ParagraphBlock[];
+};
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const aboutParagraphs = await getParagraphBlocksFromPage(
+    process.env.NOTION_ABOUT_PAGE_ID,
+  );
+  return {
+    props: {
+      aboutParagraphs,
+    },
+  };
+};
+
+export default function Home({ aboutParagraphs }: HomeProps) {
   return (
     <Page>
-      <About />
+      <About paragraphs={aboutParagraphs} />
     </Page>
   );
 }

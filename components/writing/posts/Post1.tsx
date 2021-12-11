@@ -1,5 +1,5 @@
-import PostHeader from "components/writing/PostHeader";
-import PostBody from "components/writing/PostBody";
+import PostHeader from 'components/writing/PostHeader';
+import PostBody from 'components/writing/PostBody';
 
 export default function Post1() {
   return (
@@ -9,7 +9,7 @@ export default function Post1() {
         date="January 10, 2021"
       />
       <PostBody>
-        I recently made the decision to leave my job as a software engineer at{" "}
+        I recently made the decision to leave my job as a software engineer at{' '}
         <a
           className="underline"
           aria-label="Airbnb link"
@@ -17,8 +17,8 @@ export default function Post1() {
           target="_blank"
         >
           Airbnb
-        </a>{" "}
-        to join{" "}
+        </a>{' '}
+        to join{' '}
         <a
           className="underline"
           aria-label="Explo link"
@@ -26,7 +26,7 @@ export default function Post1() {
           target="_blank"
         >
           Explo
-        </a>{" "}
+        </a>{' '}
         full-time as a founding engineer. I thought it could be helpful to share
         how I went about making the decision, the different considerations I
         made, and what I learned from the process.
@@ -35,7 +35,7 @@ export default function Post1() {
         <div>
           When I was first approached about the opening for a founding engineer
           at Explo, I almost rejected the opportunity immediately. This is
-          because I was (and still am) working on building{" "}
+          because I was (and still am) working on building{' '}
           <a
             className="underline"
             aria-label="momo link"
@@ -43,7 +43,7 @@ export default function Post1() {
             target="_blank"
           >
             momo
-          </a>{" "}
+          </a>{' '}
           outside of my day job, which appeared to me as a conflict of interest.
           How could I possibly take on this position at an early stage company
           while simultaneously building another company on the side? It wasn't
@@ -75,17 +75,17 @@ export default function Post1() {
             momo
           </div>
         </div>
-        My dad explained that there's actually a third option,{" "}
-        <span className="font-semibold">Door #3</span>, which is to{" "}
+        My dad explained that there's actually a third option,{' '}
+        <span className="font-semibold">Door #3</span>, which is to{' '}
         <span className="font-semibold">
           gather more information before making a decision
         </span>
         . When I analyzed my decision-making process, much of it was based on
         assumptions. I <span className="italic">assumed</span> that Explo
-        wouldn't want me working on momo, and even if they did, I{" "}
+        wouldn't want me working on momo, and even if they did, I{' '}
         <span className="italic">assumed</span> that the precarity of momo
         taking off would leave too much up in the air for me to provide a solid
-        long-term commitment (even deeper, I{" "}
+        long-term commitment (even deeper, I{' '}
         <span className="italic">assumed</span> that a relatively long-term
         commitment to Explo was necessary for this to work). I decided to
         discuss my situation with the founders instead of stick with these
@@ -96,17 +96,17 @@ export default function Post1() {
         Once I spoke with the founders and discovered that my assumptions
         regarding Explo/momo were untrue, I began to think about whether
         pursuing this opportunity was the right choice. The big question in my
-        mind was:{" "}
+        mind was:{' '}
         <span className="font-semibold">
           Which opportunity will allow me to grow the most?
-        </span>{" "}
+        </span>{' '}
         In my mind, growth as an engineer has two dimensions:
         <div className="my-2">
           <div className="ml-4">
             1. Vertical growth (i.e. going <span className="italic">deep</span>)
           </div>
           <div className="ml-4">
-            2. Horizontal growth (i.e. going{" "}
+            2. Horizontal growth (i.e. going{' '}
             <span className="italic">broad</span>)
           </div>
         </div>
@@ -114,10 +114,10 @@ export default function Post1() {
         point resounded: Larger companies are better for vertical growth, and
         startups are better for horizontal growth. This made sense to me. On the
         whole, I think this tends to be true. But by thinking through my own
-        situation, something else became clear:{" "}
+        situation, something else became clear:{' '}
         <span className="font-semibold">
           I was focused on the <span className="italic">idea</span> of a large
-          company vs startup instead of my{" "}
+          company vs startup instead of my{' '}
           <span className="italic">personal circumstance</span>
         </span>
         . I switched from "Large company vs Startup" to "Airbnb vs Explo". I
@@ -128,7 +128,7 @@ export default function Post1() {
       </PostBody>
       <PostBody header="Conclusion">
         I learned a lot from this experience and hope to utilize these learnings
-        when making decisions in the future. Combining these principles with the{" "}
+        when making decisions in the future. Combining these principles with the{' '}
         <a
           className="underline"
           aria-label="Regret Minimization Framework link"
@@ -136,7 +136,7 @@ export default function Post1() {
           target="_blank"
         >
           Regret Minimization Framework
-        </a>{" "}
+        </a>{' '}
         provides a solid foundation for making good choices. If you found this
         post interesting, have any questions, or just want to chat, feel free to
         shoot me an email at apiel51@gmail.com (I respond to all personal emails

@@ -11,7 +11,7 @@ export default function BookRow({ date, favorite, title, url }: Props) {
       <div className="flex items-center pr-4 text-gray-700">{date}</div>
       <div className="flex-1">
         <a
-          className={`text-lg leading-tight ${favorite && "font-semibold"}`}
+          className={`text-lg leading-tight ${favorite && 'font-semibold'}`}
           href={url}
           target="_blank"
         >

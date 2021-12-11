@@ -1,7 +1,7 @@
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 
-import Page from "components/shared/Page";
-import { Post1 } from "components/writing/posts";
+import Page from 'components/shared/Page';
+import { Post1 } from 'components/writing/posts';
 
 export default function Post() {
   const router = useRouter();

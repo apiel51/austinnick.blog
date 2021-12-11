@@ -1,5 +1,5 @@
-import ComingSoon from "shared/ComingSoon";
-import PostRow from "./PostRow";
+import ComingSoon from 'shared/ComingSoon';
+import PostRow from './PostRow';
 
 export default function Bookshelf() {
   return (

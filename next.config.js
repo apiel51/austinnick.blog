@@ -1,2 +1,5 @@
-const withImages = require("next-images");
-module.exports = withImages();
+const nextConfig = {
+  /* config options here */
+};
+
+module.exports = nextConfig;

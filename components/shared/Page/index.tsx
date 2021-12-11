@@ -1,6 +1,6 @@
-import { FunctionComponent } from "react";
-import Header from "./Header";
-import Links from "./Links";
+import { FunctionComponent } from 'react';
+import Header from './Header';
+import Links from './Links';
 
 const Page: FunctionComponent = ({ children }) => {
   return (

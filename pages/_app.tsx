@@ -1,5 +1,5 @@
-import Head from "next/head";
-import "styles/tailwind.css";
+import Head from 'next/head';
+import 'styles/tailwind.css';
 
 // pass strict
 type Props = {

@@ -1,6 +1,6 @@
-import { FunctionComponent } from "react";
-import { useRouter } from "next/router";
-import NextLink from "next/link";
+import { FunctionComponent } from 'react';
+import { useRouter } from 'next/router';
+import NextLink from 'next/link';
 
 type LinkProps = {
   path: string;
@@ -23,10 +23,10 @@ const Link: FunctionComponent<LinkProps> = ({ children, path }) => {
 };
 
 const pathMap = {
-  About: "/",
-  Writing: "/writing",
-  Bookshelf: "/bookshelf",
-  Thoughts: "/thoughts",
+  About: '/',
+  Writing: '/writing',
+  Bookshelf: '/bookshelf',
+  Thoughts: '/thoughts',
   /* maybe I'll end up doing this idk ¯\_(ツ)_/¯ */
   // Music: "/music",
 };
@@ -42,7 +42,7 @@ export default function MobileLinks() {
           <Link key={mapping[0]} path={mapping[1]}>
             {mapping[0]}
           </Link>
-        )
+        ),
       )}
     </nav>
   );

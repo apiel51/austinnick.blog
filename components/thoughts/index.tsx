@@ -1,4 +1,4 @@
-import NextLink from "next/link";
+import NextLink from 'next/link';
 
 export default function Thoughts() {
   return (
@@ -11,7 +11,7 @@ export default function Thoughts() {
       find especially important are bolded.
       <ul className="list-disc list-inside pt-4 grid gap-y-2">
         <li>
-          The{" "}
+          The{' '}
           <a
             aria-label="Google nest hub link"
             className="underline"
@@ -19,7 +19,7 @@ export default function Thoughts() {
             target="_blank"
           >
             Google nest hub
-          </a>{" "}
+          </a>{' '}
           is great in the kitchen for viewing multiple cooking timers at once.
         </li>
         <li>

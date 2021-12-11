@@ -1,42 +1,46 @@
-import Link from "next/link";
+import Link from 'next/link';
+import Image from 'next/image';
 
-import LinkedInIcon from "public/linkedin-logo.svg";
-import GithubIcon from "public/github-logo.svg";
+import LinkedInIcon from 'public/linkedin-logo.svg';
+import GithubIcon from 'public/github-logo.svg';
+import headshot from '../../../public/headshot.png';
 
 export default function Header() {
   return (
     <header className="flex flex-col items-center justify-center">
-      <img
-        className="sm:w-20 sm:h-20 flex rounded-full w-16 h-16"
-        alt="picture of Austin"
-        src="https://public-bucket-austin-things.s3-us-west-2.amazonaws.com/austin_headshot.jpg"
-      />
+      <div className="sm:w-28 sm:h-28 flex w-16 h-16 relative">
+        <Image
+          alt="Austin"
+          src={headshot}
+          layout="fill"
+          className="rounded-full"
+        />
+      </div>
       <Link href="/">
-        <div className="py-1 text-2xl cursor-pointer">Austin Piel</div>
+        <div className="py-1 text-2xl cursor-pointer">Austin Nick Piel</div>
       </Link>
       <div className="flex-1 flex">
         <a
-          className="mr-2"
+          className="mr-2 w-4 h-4 cursor-pointer"
           aria-label="LinkedIn icon button"
           href="https://www.linkedin.com/in/austinpiel/"
           target="_blank"
+          rel="noreferrer"
         >
-          <img
-            className="w-4 h-4 cursor-pointer"
+          <Image
+            className="rounded-sm"
             alt="linkedin icon"
             src={LinkedInIcon}
           />
         </a>
         <a
+          className="w-4 h-4 cursor-pointer"
           aria-label="Github icon button"
           href="https://github.com/apiel51"
           target="_blank"
+          rel="noreferrer"
         >
-          <img
-            className="w-4 h-4 rounded-sm cursor-pointer"
-            alt="github icon"
-            src={GithubIcon}
-          />
+          <Image className="rounded-full" alt="github icon" src={GithubIcon} />
         </a>
       </div>
     </header>
