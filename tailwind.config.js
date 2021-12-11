@@ -1,14 +1,7 @@
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
-  purge: [
-    "./pages/**/*.tsx",
-    "./pages/*.tsx",
-    "./pages/_document.js",
-    "./components/*.tsx",
-    "./components/**/*.tsx",
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -20,6 +13,5 @@ module.exports = {
       sans: "barlow, sans-serif",
     },
   },
-  variants: {},
   plugins: [],
 };
