@@ -16,6 +16,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
     props: {
       aboutParagraphs,
     },
+    revalidate: 60,
   };
 };
 
