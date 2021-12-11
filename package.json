@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "yarn build:styles && next dev",
-    "build": "yarn build:styles && next build",
-    "build:styles": "postcss styles/tailwind.css -o styles/index.css",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {

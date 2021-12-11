@@ -1,5 +1,4 @@
 import Head from "next/head";
-import "styles/index.css";
 import "styles/tailwind.css";
 
 // pass strict
