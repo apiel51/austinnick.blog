@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next';
 
-import { getPropertiesForDatabaseEntries } from 'utils/notion';
+import { getPropertiesForBlogPostEntries } from 'utils/blog';
 import { Page } from 'shared/Page';
 import { Writing, PostInfo } from 'components/writing';
 
@@ -9,7 +9,7 @@ type WritingPageProps = {
 };
 
 export const getStaticProps: GetStaticProps<WritingPageProps> = async () => {
-  const postsInfo = await getPropertiesForDatabaseEntries(
+  const postsInfo = await getPropertiesForBlogPostEntries(
     process.env.NOTION_WRITING_DATABASE_ID,
   );
 

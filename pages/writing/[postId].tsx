@@ -4,11 +4,13 @@ import { Page } from 'shared/Page';
 import PostHeader from 'components/writing/PostHeader';
 import {
   getBlogPostPageIdByPostId,
+  isBlogPostProperties,
+  getPropertiesForBlogPostEntries,
+} from 'utils/blog';
+import {
   getTextBlocksFromPage,
-  getPropertiesForDatabaseEntries,
   TextBlock,
   getPageDetails,
-  isBlogPostProperties,
   getDateFromNotionDate,
 } from 'utils/notion';
 import { format } from 'date-fns';
@@ -23,7 +25,7 @@ type PostProps = {
 };
 
 export const getStaticPaths: GetStaticPaths<PostParams> = async () => {
-  const postsInfo = await getPropertiesForDatabaseEntries(
+  const postsInfo = await getPropertiesForBlogPostEntries(
     process.env.NOTION_WRITING_DATABASE_ID,
   );
 
