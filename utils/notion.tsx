@@ -18,7 +18,11 @@ export type TextItem = {
     underline: boolean;
   };
 };
-export type TextBlock = ParagraphBlock | Heading3Block | NumberedListItemBlock;
+export type TextBlock =
+  | ParagraphBlock
+  | Heading3Block
+  | NumberedListItemBlock
+  | BulletedListItem;
 
 export type ParagraphBlock = TextBlockBase & {
   type: 'paragraph';
@@ -53,6 +57,17 @@ export function isNumberedListItemBlock(
 ): blockResult is NumberedListItemBlock {
   return blockResult.type === 'numbered_list_item';
 }
+export type BulletedListItem = TextBlockBase & {
+  type: 'bulleted_list_item';
+  bulleted_list_item: {
+    text: TextItem[];
+  };
+};
+export function isBulletedListItemBlock(
+  blockResult: TextBlockBase,
+): blockResult is BulletedListItem {
+  return blockResult.type === 'bulleted_list_item';
+}
 
 export async function getPageDetails(pageId?: string) {
   if (!pageId) {
@@ -74,7 +89,8 @@ export async function getTextBlocksFromPage(pageId?: string) {
         if (
           isParagraphBlock(result) ||
           isHeading3Block(result) ||
-          isNumberedListItemBlock(result)
+          isNumberedListItemBlock(result) ||
+          isBulletedListItemBlock(result)
         ) {
           return result;
         }

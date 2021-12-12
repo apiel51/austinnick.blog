@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  isBulletedListItemBlock,
   isHeading3Block,
   isNumberedListItemBlock,
   isParagraphBlock,
@@ -25,6 +26,7 @@ export default function TextBlob({ textBlocks }: TextBlobProps) {
 
         return (
           <TextBlockElements
+            key={JSON.stringify(textBlock)}
             textBlocks={textBlocks}
             idx={idx}
             listItemNumber={listItemNumber}
@@ -86,6 +88,17 @@ function TextBlockElements({
           textItems={textBlock.numbered_list_item.text}
         />
       </div>
+    );
+  }
+
+  if (isBulletedListItemBlock(textBlock)) {
+    return (
+      <li className="mb-2">
+        <TextItemElement
+          textBlockId={id}
+          textItems={textBlock.bulleted_list_item.text}
+        />
+      </li>
     );
   }
 
