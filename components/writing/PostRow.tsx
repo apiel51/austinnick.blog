@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { formatNotionDate } from 'notion';
+import { format } from 'date-fns';
+import { getDateFromNotionDate } from 'utils/notion';
 
 export type PostInfo = {
   title: string;
@@ -9,10 +10,10 @@ export type PostInfo = {
 };
 
 export default function PostRow({ subtitle, date, postId, title }: PostInfo) {
-  const formattedDate = formatNotionDate(date);
+  const formattedDate = format(getDateFromNotionDate(date), 'MM/dd/yy');
 
   return (
-    <div className="flex py-4 text-sm max-w-md">
+    <div className="flex py-2 text-sm max-w-md">
       <div className="flex items-center pr-4 text-gray-700">
         {formattedDate}
       </div>

@@ -10,7 +10,7 @@ export function Writing({ postsInfo }: WritingProps) {
   return (
     <>
       {postsInfo.map((postInfo) => (
-        <div className="pb-8">
+        <div key={JSON.stringify(postInfo)} className="pb-2">
           <div>
             <PostRow {...postInfo} />
           </div>
