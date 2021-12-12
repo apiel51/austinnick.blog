@@ -29,6 +29,7 @@ export const getStaticProps: GetStaticProps<ThoughtsPageProps> = async () => {
       textBlocks,
       lastUpdatedDate,
     },
+    revalidate: 60,
   };
 };
 

@@ -15,6 +15,7 @@ export const getStaticProps: GetStaticProps<BookshelfPageProps> = async () => {
     props: {
       booksInfo,
     },
+    revalidate: 60,
   };
 };
 
