@@ -33,7 +33,8 @@ export const getStaticPaths: GetStaticPaths<PostParams> = async () => {
     paths: postsInfo.map(({ postId }) => ({
       params: { postId: String(postId) },
     })),
-    fallback: false,
+    // TODO: We should have fallback: true here and have a loading state
+    fallback: 'blocking',
   };
 };
 
