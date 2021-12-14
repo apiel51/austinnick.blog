@@ -12,7 +12,7 @@ export default function MyApp({ Component, pageProps }: Props) {
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <title>Austin Piel</title>
+        <title>Austin&#39;s Blog</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
