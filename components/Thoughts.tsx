@@ -18,7 +18,7 @@ export default function Thoughts({
       This is a list of some things that have crossed my mind. Some are
       half-baked, but still thought they would be interesting to share. Items
       are placed in reverse chronological order.
-      <ul className="list-disc list-inside pt-4 grid gap-y-2">
+      <ul className="list-disc list-inside grid gap-y-2">
         <TextBlob textBlocks={textBlocks} />
       </ul>
     </div>
