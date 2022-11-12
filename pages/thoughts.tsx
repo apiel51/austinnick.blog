@@ -2,12 +2,7 @@ import { GetStaticProps } from 'next';
 
 import { Page } from 'shared/Page';
 import Thoughts from 'components/Thoughts';
-import {
-  getDateFromNotionDate,
-  getPageDetails,
-  getTextBlocksFromPage,
-  TextBlock,
-} from 'utils/notion';
+import { getPageDetails, getTextBlocksFromPage, TextBlock } from 'utils/notion';
 import { format } from 'date-fns';
 
 type ThoughtsPageProps = {
@@ -20,9 +15,8 @@ export const getStaticProps: GetStaticProps<ThoughtsPageProps> = async () => {
     process.env.NOTION_THOUGHTS_PAGE_ID,
   );
   const pageDetails = await getPageDetails(process.env.NOTION_THOUGHTS_PAGE_ID);
-  const lastUpdatedNotionDate = pageDetails?.last_edited_time.slice(0, 10);
-  const lastUpdatedDate = lastUpdatedNotionDate
-    ? format(getDateFromNotionDate(lastUpdatedNotionDate), 'MMMM do, yyyy')
+  const lastUpdatedDate = pageDetails?.last_edited_time
+    ? format(new Date(pageDetails.last_edited_time), 'MMMM do, yyyy')
     : '';
   return {
     props: {

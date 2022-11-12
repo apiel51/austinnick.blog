@@ -1,4 +1,4 @@
-import { FunctionComponent } from 'react';
+import { PropsWithChildren } from 'react';
 import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 
@@ -6,19 +6,17 @@ type LinkProps = {
   path: string;
 };
 
-const BoldText: FunctionComponent = ({ children }) => {
+const BoldText = ({ children }: PropsWithChildren<{}>) => {
   return (
     <div className="flex-1 font-semibold text-xs sm:text-base">{children}</div>
   );
 };
 
-const Link: FunctionComponent<LinkProps> = ({ children, path }) => {
+const Link = ({ children, path }: PropsWithChildren<LinkProps>) => {
   return (
-    <NextLink href={path}>
-      <div className="flex-1 underline cursor-pointer text-xs sm:text-base">
-        {children}
-      </div>
-    </NextLink>
+    <div className="flex-1 underline cursor-pointer text-xs sm:text-base">
+      <NextLink href={path}>{children}</NextLink>
+    </div>
   );
 };
 

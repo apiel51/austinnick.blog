@@ -9,12 +9,7 @@ export default function Header() {
   return (
     <header className="flex flex-col items-center justify-center">
       <div className="sm:w-28 sm:h-28 flex w-16 h-16 relative">
-        <Image
-          alt="Austin"
-          src={headshot}
-          layout="fill"
-          className="rounded-full"
-        />
+        <Image alt="Austin" src={headshot} className="rounded-full" />
       </div>
       <Link passHref href="/">
         <div className="py-1 text-2xl cursor-pointer">Austin Nick Piel</div>
