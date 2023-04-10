@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Analytics } from '@vercel/analytics/react';
 import 'styles/tailwind.css';
 
 // pass strict
@@ -35,6 +36,7 @@ export default function MyApp({ Component, pageProps }: Props) {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
       <Component {...pageProps} />
+      <Analytics />
     </div>
   );
 }
