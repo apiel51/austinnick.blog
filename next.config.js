@@ -12,6 +12,13 @@ const nextConfig = {
         basePath: false,
         permanent: false,
       },
+      {
+        source: '/good-person',
+        destination:
+          'https://austinnp.notion.site/Is-Austin-from-Hinge-a-good-person-293c7cec326a4d13acefc416346f8f7c',
+        basePath: false,
+        permanent: false,
+      },
     ];
   },
 };
