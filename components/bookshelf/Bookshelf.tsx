@@ -11,7 +11,7 @@ export function Bookshelf({ booksInfo }: Props) {
     <div className="pb-8">
       This is a running list of books that I have read since the inception of
       this website. Titles I particularly enjoyed are bolded.
-      <div className="pt-2 mt-2">
+      <div className="mt-2">
         {booksInfo.map((bookInfo) => (
           <BookRow {...bookInfo} />
         ))}
