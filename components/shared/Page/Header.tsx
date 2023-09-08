@@ -3,13 +3,13 @@ import Image from 'next/image';
 
 import LinkedInIcon from 'public/linkedin-logo.svg';
 import GithubIcon from 'public/github-logo.svg';
-import headshot from '../../../public/headshot.png';
+import propic from '../../../public/wide-eyed.png';
 
 export default function Header() {
   return (
     <header className="flex flex-col items-center justify-center">
-      <div className="sm:w-28 sm:h-28 flex w-16 h-16 relative">
-        <Image alt="Austin" src={headshot} className="rounded-full" />
+      <div className="sm:w-24 sm:h-24 flex w-16 h-16 relative">
+        <Image alt="Austin" src={propic} className="rounded-full" />
       </div>
       <Link passHref href="/">
         <div className="py-1 text-2xl cursor-pointer">Austin Nick Piel</div>
