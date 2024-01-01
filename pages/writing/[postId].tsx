@@ -1,15 +1,16 @@
-import { GetStaticProps, GetStaticPaths } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 
-import { Page } from 'shared/Page';
 import PostHeader from 'components/writing/PostHeader';
+import { format } from 'date-fns';
+import Head from 'next/head';
+import { Page } from 'shared/Page';
+import TextBlob from 'shared/TextBlob';
 import {
   getBlogPostPageIdByPostId,
-  isBlogPostProperties,
   getPropertiesForBlogPostEntries,
+  isBlogPostProperties,
 } from 'utils/blog';
-import { getTextBlocksFromPage, TextBlock, getPageDetails } from 'utils/notion';
-import { format } from 'date-fns';
-import TextBlob from 'shared/TextBlob';
+import { TextBlock, getPageDetails, getTextBlocksFromPage } from 'utils/notion';
 
 type PostParams = { postId: string };
 
@@ -62,9 +63,15 @@ export default function Post({ date, title, textBlocks }: PostProps) {
   const formattedDate = format(new Date(date), 'MMMM do, yyyy');
 
   return (
-    <Page>
-      <PostHeader date={formattedDate} title={title} />
-      <TextBlob textBlocks={textBlocks} />
-    </Page>
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta property="og:title" content={title} key="title" />
+      </Head>
+      <Page>
+        <PostHeader date={formattedDate} title={title} />
+        <TextBlob textBlocks={textBlocks} />
+      </Page>
+    </>
   );
 }
