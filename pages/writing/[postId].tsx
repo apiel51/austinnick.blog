@@ -17,6 +17,7 @@ type PostParams = { postId: string };
 type PostProps = {
   textBlocks: TextBlock[];
   title: string;
+  subtitle: string;
   date: string;
 };
 
@@ -53,13 +54,14 @@ export const getStaticProps: GetStaticProps<PostProps, PostParams> = async ({
     props: {
       textBlocks,
       title: properties.Name.title[0].plain_text,
+      subtitle: properties.subtitle.rich_text[0].plain_text,
       date: properties.datePublished.date.start,
     },
     revalidate: 60,
   };
 };
 
-export default function Post({ date, title, textBlocks }: PostProps) {
+export default function Post({ date, title, textBlocks, subtitle }: PostProps) {
   const formattedDate = format(new Date(date), 'MMMM do, yyyy');
 
   return (
@@ -67,6 +69,8 @@ export default function Post({ date, title, textBlocks }: PostProps) {
       <Head>
         <title>{title}</title>
         <meta property="og:title" content={title} key="title" />
+        <meta name="description" content={subtitle} key="description" />
+        <meta name="og:description" content={subtitle} key="og:description" />
       </Head>
       <Page>
         <PostHeader date={formattedDate} title={title} />
