@@ -57,7 +57,7 @@ function TextBlockElements({
           idx < textBlocks.length - 1 &&
           textBlocks[idx + 1].type === 'numbered_list_item'
             ? 'mb-2'
-            : 'mb-4'
+            : 'mb-3'
         }
       >
         <TextItemElement
