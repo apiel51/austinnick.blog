@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 import LinkedInIcon from 'public/linkedin-logo.svg';
 import GithubIcon from 'public/github-logo.svg';
+import XIcon from 'public/x-logo.svg';
 import propic from '../../../public/wide-eyed.png';
 
 export default function Header() {
@@ -15,6 +16,15 @@ export default function Header() {
         <div className="py-1 text-2xl cursor-pointer">Austin Nick Piel</div>
       </Link>
       <div className="flex-1 flex">
+        <a
+          className="mr-2 w-4 h-4 cursor-pointer"
+          aria-label="X icon button"
+          href="https://twitter.com/austinnickpiel/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Image className="rounded-sm" alt="linkedin icon" src={XIcon} />
+        </a>
         <a
           className="mr-2 w-4 h-4 cursor-pointer"
           aria-label="LinkedIn icon button"
