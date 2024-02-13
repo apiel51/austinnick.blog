@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   isBulletedListItemBlock,
   isHeading3Block,
@@ -134,7 +133,7 @@ function TextItemElement({ textBlockId, textItems }: TextItemElementProps) {
             <a
               key={`${textBlockId}-${href}-${text}`}
               aria-label={`${href} link`}
-              className={`${className} underline`}
+              className={`${className} underline cursor-pointer`}
               href={href}
               target="_blank"
               rel="noreferrer"

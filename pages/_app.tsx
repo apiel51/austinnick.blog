@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Analytics } from '@vercel/analytics/react';
 import 'styles/tailwind.css';
+import 'styles/global.css';
 
 // pass strict
 type Props = {

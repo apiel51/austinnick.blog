@@ -17,6 +17,10 @@ type BookBlock = {
       type: 'checkbox';
       checkbox: boolean;
     };
+    slug: {
+      type: 'rich_text';
+      rich_text: [TextItem];
+    };
     Name: {
       type: 'title';
       title: [TextItem];
@@ -29,6 +33,32 @@ function isBookBlock(block: any): block is BookBlock {
     block?.properties?.link?.url &&
     isDefined(block?.properties?.hidden) &&
     block?.properties?.Name?.title?.[0]
+  );
+}
+
+export type BookNotesProperties = {
+  Name: {
+    type: 'title';
+    title: [{ plain_text: string }];
+  };
+  dateFinished: {
+    type: 'date';
+    date: {
+      start: string;
+    };
+  };
+  slug: {
+    type: 'rich_text';
+    rich_text: [TextItem];
+  };
+};
+export function isBookNotesProperties(
+  properties?: any,
+): properties is BookNotesProperties {
+  return (
+    properties?.Name?.title?.[0]?.plain_text &&
+    properties?.dateFinished?.date?.start &&
+    properties?.slug?.rich_text?.[0]?.plain_text
   );
 }
 
@@ -58,8 +88,34 @@ export async function getBooksInfo(): Promise<BookInfo[]> {
       title: book.properties.Name.title[0].plain_text,
       url: book.properties.link.url,
       favorite: book.properties.rating.number === 5,
+      slug: book.properties.slug
+        ? book.properties.slug.rich_text[0]?.plain_text || null
+        : null,
     };
   });
 
   return compact(booksInfo);
+}
+
+export async function getBookNotesBySlug(slug: string | undefined) {
+  const databaseId = process.env.NOTION_BOOK_NOTES_DATABASE_ID;
+  if (!slug || !databaseId) {
+    return null;
+  }
+
+  const response = await NotionClient.databases.query({
+    database_id: databaseId,
+    filter: {
+      property: 'slug',
+      text: {
+        equals: slug,
+      },
+    },
+  });
+
+  if (!response?.results?.length) {
+    return null;
+  }
+
+  return response.results[0].id;
 }

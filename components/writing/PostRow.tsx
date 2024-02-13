@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { format } from 'date-fns';
+import Link from 'next/link';
 
 export type PostInfo = {
   title: string;
@@ -18,7 +18,7 @@ export default function PostRow({ subtitle, date, postId, title }: PostInfo) {
       </div>
       <div className="flex-1">
         <Link passHref href={`/writing/${postId}`}>
-          <div className="text-2xl leading-tight cursor-pointer">{title}</div>
+          <div className="text-2xl leading-tight hover:underline">{title}</div>
         </Link>
         {subtitle}
       </div>

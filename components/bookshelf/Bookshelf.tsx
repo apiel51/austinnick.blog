@@ -13,7 +13,7 @@ export function Bookshelf({ booksInfo }: Props) {
       this website. Titles I particularly enjoyed are bolded.
       <div className="mt-2">
         {booksInfo.map((bookInfo) => (
-          <BookRow {...bookInfo} />
+          <BookRow key={bookInfo.url} {...bookInfo} />
         ))}
       </div>
     </div>

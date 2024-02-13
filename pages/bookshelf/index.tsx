@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 
-import { Page } from 'shared/Page';
 import { BookInfo, Bookshelf } from 'components/bookshelf';
+import { Page } from 'shared/Page';
 import { getBooksInfo } from 'utils/bookshelf';
 
 type BookshelfPageProps = {

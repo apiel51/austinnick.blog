@@ -1,6 +1,6 @@
-import { PropsWithChildren } from 'react';
-import { useRouter } from 'next/router';
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
+import { PropsWithChildren } from 'react';
 
 type LinkProps = {
   path: string;
@@ -14,7 +14,7 @@ const BoldText = ({ children }: PropsWithChildren<{}>) => {
 
 const Link = ({ children, path }: PropsWithChildren<LinkProps>) => {
   return (
-    <div className="flex-1 underline cursor-pointer text-xs sm:text-base">
+    <div className="flex-1 text-xs sm:text-base hover:underline">
       <NextLink href={path}>{children}</NextLink>
     </div>
   );
