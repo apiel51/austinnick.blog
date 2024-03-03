@@ -1,5 +1,5 @@
-import { format } from 'date-fns';
 import Link from 'next/link';
+import { formatNotionDateProperty } from 'utils/general';
 
 export type PostInfo = {
   title: string;
@@ -9,7 +9,7 @@ export type PostInfo = {
 };
 
 export default function PostRow({ subtitle, date, postId, title }: PostInfo) {
-  const formattedDate = format(new Date(date), 'MM/dd/yy');
+  const formattedDate = formatNotionDateProperty(date, 'MM/dd/yy');
 
   return (
     <div className="flex py-2 text-sm max-w-md">

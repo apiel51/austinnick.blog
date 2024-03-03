@@ -1,9 +1,9 @@
 import { GetStaticProps } from 'next';
 
-import { Page } from 'shared/Page';
 import Thoughts from 'components/Thoughts';
-import { getPageDetails, getTextBlocksFromPage, TextBlock } from 'utils/notion';
 import { format } from 'date-fns';
+import { Page } from 'shared/Page';
+import { getPageDetails, getTextBlocksFromPage, TextBlock } from 'utils/notion';
 
 type ThoughtsPageProps = {
   textBlocks: TextBlock[];

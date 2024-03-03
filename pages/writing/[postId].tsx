@@ -1,7 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 import PostHeader from 'components/writing/PostHeader';
-import { format } from 'date-fns';
 import Head from 'next/head';
 import { Page } from 'shared/Page';
 import TextBlob from 'shared/TextBlob';
@@ -10,6 +9,7 @@ import {
   getPropertiesForBlogPostEntries,
   isBlogPostProperties,
 } from 'utils/blog';
+import { formatNotionDateProperty } from 'utils/general';
 import { TextBlock, getPageDetails, getTextBlocksFromPage } from 'utils/notion';
 
 type PostParams = { postId: string };
@@ -62,7 +62,7 @@ export const getStaticProps: GetStaticProps<PostProps, PostParams> = async ({
 };
 
 export default function Post({ date, title, textBlocks, subtitle }: PostProps) {
-  const formattedDate = format(new Date(date), 'MMMM do, yyyy');
+  const formattedDate = formatNotionDateProperty(date, 'MMMM do, yyyy');
 
   return (
     <>

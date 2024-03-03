@@ -3,6 +3,9 @@ import { compact } from 'lodash';
 import { isDefined } from './general';
 import { NotionClient, TextItem } from './notion';
 
+/**
+ * Represents the structure of my 'Books' database in Notion.
+ */
 type BookBlock = {
   properties: {
     rating: {
@@ -36,6 +39,9 @@ function isBookBlock(block: any): block is BookBlock {
   );
 }
 
+/**
+ * Represents the structure of my 'Book Notes' database in Notion.
+ */
 export type BookNotesProperties = {
   Name: {
     type: 'title';
@@ -97,7 +103,7 @@ export async function getBooksInfo(): Promise<BookInfo[]> {
   return compact(booksInfo);
 }
 
-export async function getBookNotesBySlug(slug: string | undefined) {
+export async function getBookNotesIdBySlug(slug: string | undefined) {
   const databaseId = process.env.NOTION_BOOK_NOTES_DATABASE_ID;
   if (!slug || !databaseId) {
     return null;

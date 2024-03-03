@@ -1,15 +1,15 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 import PostHeader from 'components/writing/PostHeader';
-import { format } from 'date-fns';
 import Head from 'next/head';
 import { Page } from 'shared/Page';
 import TextBlob from 'shared/TextBlob';
 import {
-  getBookNotesBySlug,
+  getBookNotesIdBySlug,
   getBooksInfo,
   isBookNotesProperties,
 } from 'utils/bookshelf';
+import { formatNotionDateProperty } from 'utils/general';
 import { TextBlock, getPageDetails, getTextBlocksFromPage } from 'utils/notion';
 
 type BookNotesParams = { slug: string };
@@ -36,7 +36,7 @@ export const getStaticProps: GetStaticProps<
   BookNotesProps,
   BookNotesParams
 > = async ({ params }) => {
-  const pageId = await getBookNotesBySlug(params?.slug);
+  const pageId = await getBookNotesIdBySlug(params?.slug);
   const pageDetails = await getPageDetails(pageId ?? undefined);
   const textBlocks = await getTextBlocksFromPage(pageId ?? undefined);
 
@@ -59,7 +59,7 @@ export const getStaticProps: GetStaticProps<
 };
 
 export default function BookNotes({ date, title, textBlocks }: BookNotesProps) {
-  const formattedDate = format(new Date(date), 'MMMM do, yyyy');
+  const formattedDate = formatNotionDateProperty(date, 'MMMM do, yyyy');
 
   return (
     <>
