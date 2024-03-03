@@ -52,7 +52,7 @@ export const getStaticProps: GetStaticProps<
     props: {
       textBlocks,
       title: properties.Name.title[0].plain_text,
-      date: properties.dateFinished.date.start,
+      date: properties.datePublished.date.start,
     },
     revalidate: 60,
   };

@@ -47,7 +47,7 @@ export type BookNotesProperties = {
     type: 'title';
     title: [{ plain_text: string }];
   };
-  dateFinished: {
+  datePublished: {
     type: 'date';
     date: {
       start: string;
@@ -63,7 +63,7 @@ export function isBookNotesProperties(
 ): properties is BookNotesProperties {
   return (
     properties?.Name?.title?.[0]?.plain_text &&
-    properties?.dateFinished?.date?.start &&
+    properties?.datePublished?.date?.start &&
     properties?.slug?.rich_text?.[0]?.plain_text
   );
 }
