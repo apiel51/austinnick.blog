@@ -33,10 +33,7 @@ export default function ThoughtsPage({
 }: ThoughtsPageProps) {
   return (
     <Page>
-      <Thoughts
-        lastUpdatedDate={lastUpdatedDate}
-        textBlocks={[...textBlocks].reverse()}
-      />
+      <Thoughts lastUpdatedDate={lastUpdatedDate} textBlocks={textBlocks} />
     </Page>
   );
 }
